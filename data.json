@@ -1,0 +1,78 @@
+{
+    "dates":[
+    {
+        "id": 0,
+       "datum": "2020-05-11",
+       "veckodag": "Onsdag",
+       "arbetsfridag": false,
+       "röddag": true
+   },
+    {
+        "id": 1,
+       "datum": "2020-05-12",
+       "veckodag": "Torsdag",
+       "arbetsfridag": false,
+       "röddag": false
+   },
+    {
+       "id": 2,
+       "datum": "2020-05-13",
+       "veckodag": "Fredag",
+       "arbetsfridag": false,
+       "röddag": false
+   }, 
+   {
+    "id": 3,
+    "datum": "2020-05-14",
+    "veckodag": "Lördag",
+    "arbetsfridag": true,
+    "röddag": false
+},
+{
+    "id": 4,
+    "datum": "2020-05-15",
+    "veckodag": "söndag",
+    "arbetsfridag": true,
+    "röddag": true
+}, 
+{
+    "id": 5,
+    "datum": "2020-05-16",
+    "veckodag": "måndag",
+    "arbetsfridag": false,
+    "röddag": false
+},
+{
+    "id": 6,
+    "datum": "2020-05-17",
+    "veckodag": "tisdag",
+    "arbetsfridag": false,
+    "röddag": false
+},
+{
+    "id": 7,
+    "datum": "2020-05-18",
+    "veckodag": "onsdag",
+    "arbetsfridag": false,
+    "röddag": false
+}
+
+],
+"products": [
+    {
+        "Productid": 1,
+        "name": "Payee",
+        "paymentrule": 3
+    },
+    {
+        "Productid": 2,
+        "name": "SuperPayee",
+        "paymentrule": 3
+    },
+    {
+        "Productid": 3,
+        "name": "SuperinternationalPayee",
+        "paymentrule": 6
+    }
+]
+}
