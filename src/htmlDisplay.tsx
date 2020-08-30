@@ -11,8 +11,8 @@ export class HtmlDisplay {
     private containerElem = document.createElement("div");
     private mode: DisplayMode = DisplayMode.Form
     private dates: dayface[];
-    private datetopay: string | string[];
-    private arraytopay: string | string[];
+    private datetopay: string;
+
     
     constructor() {
         this.containerElem = document.createElement("div");
@@ -47,7 +47,7 @@ export class HtmlDisplay {
                 break;
             case DisplayMode.Complete: 
             contentElem = <div>
-                <Summary paymentDate={this.datetopay} arraytoDate={this.arraytopay}/>
+                <Summary paymentDate={this.datetopay} />
             </div>
             break;
         } 
@@ -68,10 +68,8 @@ export class HtmlDisplay {
         */
     
          calcDate = (date: string, payment: string)=>{      
-           this.props.datasource.calculator(date, payment, 1).then(value => {
+           this.props.datasource.calculator(date, payment).then(value => {
              this.datetopay = value   
-             this.props.datasource.calculator(date, payment, 2).then(array => {
-                this.arraytopay = array});
              this.mode = DisplayMode.Complete;
              this.updateContent();
       

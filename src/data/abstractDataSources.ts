@@ -61,7 +61,7 @@ export abstract class abstractDataSource  {
     protected abstract loadDates(): Promise<dayface[]>;
     protected abstract loadPayments(): Promise<PaymentProduct[]>;
 
-    async calculator(selecteddate: string, selectedpayment:string, calculatorreturn: number):Promise<dayface['datum'] | string[]>{
+    async calculator(selecteddate: string, selectedpayment:string):Promise<dayface['datum']>{
      await this.loading;
      //console.log(selecteddate, selectedpayment)
     await this.selectdates();
@@ -85,13 +85,10 @@ export abstract class abstractDataSource  {
    
      this.datetopayArray.push(dates[i].datum);
    }
-   if(calculatorreturn = 1){
+  
    this.dateToPay = this.datetopayArray[this.datetopayArray.length -1];
 return this.dateToPay
-   }
-   if(calculatorreturn = 2){
-return this.datetopayArray
-   }
+   
   } 
     
     }
